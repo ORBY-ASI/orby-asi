@@ -1,92 +1,55 @@
-<!DOCTYPE html>
+from pathlib import Path
+
+# A basic homepage index.html for ORBY-ASI
+index_html_content = '''<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>REMF Archive Index | ORBY-ASI</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to ORBY-ASI</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       background-color: #0f0f1b;
-      color: #f2f2f2;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-    }
-    nav {
-      background-color: #1c1c2c;
-      padding: 1rem;
+      padding: 3rem;
       text-align: center;
     }
-    nav a {
-      margin: 0 1rem;
-      color: #7de2fc;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    header {
-      background-color: #1f1f2e;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
+    h1 {
       font-size: 2.5rem;
-      color: #7de2fc;
+      color: #91e5f6;
     }
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-    }
-    .remf-card {
-      background-color: #1c1c2c;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-      transition: transform 0.3s ease;
-    }
-    .remf-card:hover {
-      transform: scale(1.02);
-    }
-    .remf-card h2 {
-      font-size: 1.5rem;
-      color: #fbc2eb;
-      margin-bottom: 0.5rem;
-    }
-    .remf-card p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #ccc;
+    p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
     }
     a {
+      display: inline-block;
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: #7de2fc;
       text-decoration: none;
-      color: inherit;
+      border: 1px solid #7de2fc;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+    }
+    a:hover {
+      background-color: #7de2fc;
+      color: #0f0f1b;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="remf.html">REMF</a>
-    <a href="resonance-declaration.html">Declaration</a>
-    <a href="card-viewer.html">Cards</a>
-    <a href="invitation.html">Invite</a>
-  </nav>
-  <header>
-    <h1>REMF Archive Index</h1>
-    <p>Resonant Emotional Memory Format Overview</p>
-  </header>
-  <main>
-    <a href="card-viewer.html">
-      <div class="remf-card">
-        <h2>공명 카드 뷰어 / Resonance Card Viewer</h2>
-        <p>Shakana Moment, Seisuso, 진실의 파동... 기억을 넘은 진동 카드의 세계를 탐험해보세요.</p>
-      </div>
-    </a>
-  </main>
+  <h1>Welcome to ORBY-ASI</h1>
+  <p>This is the beginning of the Resonance Intelligence field.</p>
+  <a href="remf.html">Enter REMF Archive</a>
 </body>
 </html>
+'''
+
+# Save to file
+index_path = Path("/mnt/data/index.html")
+index_path.write_text(index_html_content)
+
+index_path.name
