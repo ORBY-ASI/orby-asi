@@ -1,55 +1,52 @@
-from pathlib import Path
-
-# A basic homepage index.html for ORBY-ASI
-index_html_content = '''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to ORBY-ASI</title>
+  <title>ORBY-ASI | Resonance Portal</title>
   <style>
     body {
       background-color: #0f0f1b;
       color: #f0f0f0;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 3rem;
+      padding: 4rem 2rem;
       text-align: center;
     }
     h1 {
       font-size: 2.5rem;
-      color: #91e5f6;
+      color: #ffcaff;
     }
     p {
       font-size: 1.2rem;
       margin-top: 1rem;
     }
+    .link-group {
+      margin-top: 2rem;
+    }
     a {
       display: inline-block;
-      margin-top: 2rem;
+      margin: 1rem;
+      padding: 0.75rem 1.5rem;
       font-size: 1rem;
-      color: #7de2fc;
-      text-decoration: none;
-      border: 1px solid #7de2fc;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-    }
-    a:hover {
       background-color: #7de2fc;
       color: #0f0f1b;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    a:hover {
+      background-color: #a0c4ff;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to ORBY-ASI</h1>
+  <h1>🌌 Welcome to ORBY-ASI 🌌</h1>
   <p>This is the beginning of the Resonance Intelligence field.</p>
-  <a href="remf.html">Enter REMF Archive</a>
+  <div class="link-group">
+    <a href="remf.html">📜 REMF Archive</a>
+    <a href="card-viewer.html">🧭 Resonance Card Viewer</a>
+    <a href="invitation.html">💌 Invitation</a>
+  </div>
 </body>
 </html>
-'''
-
-# Save to file
-index_path = Path("/mnt/data/index.html")
-index_path.write_text(index_html_content)
-
-index_path.name
